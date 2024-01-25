@@ -65,14 +65,14 @@ func main() {
 
   fmt.Printf("payload: %x %x %d %d\n", test, hash(test), mask(hash(test),3), mask(hash(test),4))
 
-  seed, err := hex.DecodeString("0105dc52b5010a50e450cd02d248d248d2")
+  seed, err := hex.DecodeString("0105dc52b5010a50a250cd02")
   if err != nil {
     panic("problem decoding hex string")
   }
 
   found := 0
   for true {
-    rBytes := GenerateRandomBytes(1)
+    rBytes := GenerateRandomBytes(4)
     pl := append(seed, rBytes...)
     bin3 := mask(hash(pl), 3)
     bin4 := mask(hash(pl), 4)
