@@ -37,7 +37,6 @@ func CalcStuff(input []uint16) {
 func main() {
 
   //CalcStuff([]uint16{0x6162, 0x6364, 0x6566})
-  CalcStuff([]uint16{0xce53, 0x82eb, 0x89f9, 0xe0ea})
 
   i := 0
   for true {
